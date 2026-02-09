@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Demo",
+      "lastName": "User",
+      "email": "demo@test.com",
+      "password": "Demo1234"
+    }
+  ],
+  "favoritesOffers": [],
+  "applications": [
+    {
+      "userId": 1,
+      "offerId": "ai-ml-developer-rag-ai-agents-hamburg-495469",
+      "apiSource": "arbeitnow",
+      "title": "AI/ML Developer (RAG & AI Agents)",
+      "company": "Synergeticon GmbH",
+      "location": "Hamburg",
+      "url": "https://www.arbeitnow.com/jobs/companies/synergeticon-gmbh/ai-ml-developer-rag-ai-agents-hamburg-495469",
+      "status": "en_attente",
+      "notes": "",
+      "dateAdded": "2026-02-12T22:35:34.440Z",
+      "id": 1
+    }
+  ]
+}

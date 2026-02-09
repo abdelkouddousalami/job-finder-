@@ -1,0 +1,10 @@
+{
+  "/api/arbeitnow": {
+    "target": "https://www.arbeitnow.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/arbeitnow": "/api"
+    }
+  }
+}
