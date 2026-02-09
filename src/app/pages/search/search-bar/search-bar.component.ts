@@ -44,6 +44,9 @@ export class SearchBarComponent {
   }
 
   onSearch(): void {
-    this.search.emit(this.searchForm.value);
+    const keyword = this.searchForm.get('keyword')?.value?.trim() || '';
+    const location = this.searchForm.get('location')?.value?.trim() || '';
+    
+    this.search.emit({ keyword, location });
   }
 }
