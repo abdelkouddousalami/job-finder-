@@ -1,34 +1,45 @@
 import { HttpInterceptorFn, HttpErrorResponse } from '@angular/common/http';
+import { inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
+  const router = inject(Router);
+  
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
-      let errorMessage = 'Une erreur est survenue';
+      let errorMessage = 'An unknown error occurred';
 
       if (error.error instanceof ErrorEvent) {
         // Client-side error
-        errorMessage = `Erreur: ${error.error.message}`;
+        errorMessage = `Error: ${error.error.message}`;
       } else {
         // Server-side error
         switch (error.status) {
           case 0:
-            errorMessage = 'Impossible de se connecter au serveur. Vérifiez votre connexion.';
+            errorMessage = 'Unable to connect to server. Check your connection.';
             break;
           case 400:
-            errorMessage = 'Requête invalide.';
+            errorMessage = 'Invalid request.';
             break;
           case 401:
-            errorMessage = 'Non autorisé. Veuillez vous connecter.';
+            errorMessage = 'Unauthorized. Please login.';
+            router.navigate(['/auth/login']);
+            break;
+          case 403:
+            errorMessage = 'Forbidden. You do not have permission.';
             break;
           case 404:
-            errorMessage = 'Ressource non trouvée.';
+            errorMessage = 'Resource not found.';
             break;
           case 500:
-            errorMessage = 'Erreur interne du serveur.';
+            errorMessage = 'Internal server error.';
+            break;
+          case 503:
+            errorMessage = 'Service unavailable. Try again later.';
             break;
           default:
-            errorMessage = `Erreur ${error.status}: ${error.message}`;
+            errorMessage = `Error ${error.status}: ${error.message}`;
         }
       }
 
