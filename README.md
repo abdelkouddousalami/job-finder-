@@ -126,7 +126,7 @@ job-finder/
 
 ```bash
 # Cloner le repository
-git clone <votre-repo-url>
+git clone <(https://github.com/abdelkouddousalami/job-finder-.git)>
 cd job-finder
 
 # Installer les dépendances
