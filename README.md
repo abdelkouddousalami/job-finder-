@@ -1,52 +1,74 @@
-# 🔍 JobFinder - Application de Recherche d'Emploi
+# 🔍 JobFinder - Job Search Application
 
-## 📋 Description du Projet
+## 📋 Project Description
 
-**JobFinder** est une Single Page Application (SPA) développée avec **Angular 18** qui permet aux chercheurs d'emploi de rechercher des offres d'emploi provenant d'APIs publiques internationales. L'application offre des fonctionnalités complètes de gestion de favoris, de suivi de candidatures et de gestion de profil utilisateur.
+**JobFinder** is a Single Page Application (SPA) built with **Angular 18** that enables job seekers to search for job offers from international public APIs. The application provides complete functionality for managing favorites, tracking applications, and user profile management with an advanced black & white UI design.
 
-## ✨ Fonctionnalités Principales
+## ✨ Key Features
 
-### 🔐 Authentification & Gestion de Compte
-- ✅ Inscription avec validation complète des données
-- ✅ Connexion sécurisée
-- ✅ Gestion du profil utilisateur (modification des informations)
-- ✅ Suppression du compte
-- ✅ Protection des routes avec AuthGuard
-- ✅ Stockage sécurisé dans localStorage
+### 🔐 Authentication & Account Management
+- ✅ Registration with complete data validation
+- ✅ Secure login system
+- ✅ User profile management (edit information)
+- ✅ Account deletion
+- ✅ Route protection with AuthGuard
+- ✅ Secure localStorage storage
+- ✅ Custom form validators (email, password, phone)
 
-### 🔍 Recherche d'Emplois
-- ✅ Recherche par mots-clés (titre du poste uniquement)
-- ✅ Recherche par localisation
-- ✅ Tri automatique par date de publication (plus récent en premier)
-- ✅ Pagination côté client (10 résultats par page)
-- ✅ Chargement progressif depuis l'API
-- ✅ Indicateur de chargement pendant la recherche
-- ✅ Affichage des détails : titre, entreprise, localisation, date, description, tags
-- ✅ Accessible même pour les utilisateurs non authentifiés
+### 🔍 Job Search
+- ✅ Search by keywords (job title)
+- ✅ Search by location
+- ✅ Automatic sorting by publication date (newest first)
+- ✅ Client-side pagination (10 results per page)
+- ✅ Progressive loading from API
+- ✅ Loading indicator during search
+- ✅ Display details: title, company, location, date, description, tags
+- ✅ Accessible even for unauthenticated users
+- ✅ Input validation with trim functionality
 
-### ❤️ Gestion des Favoris (NgRX)
-- ✅ Ajout d'offres aux favoris
-- ✅ Consultation de la liste des favoris
-- ✅ Suppression de favoris
-- ✅ Indicateur visuel sur les offres déjà en favoris
-- ✅ Prévention des doublons
-- ✅ **Gestion complète avec NgRX Store + Effects**
+### ❤️ Favorites Management (NgRX)
+- ✅ Add offers to favorites
+- ✅ View favorites list
+- ✅ Remove favorites
+- ✅ Visual indicator on already favorited offers
+- ✅ Duplicate prevention
+- ✅ **Complete management with NgRX Store + Effects**
+- ✅ Favorites count badge in navbar with animation
 
-### 📋 Suivi des Candidatures
-- ✅ Ajout de candidatures au suivi
-- ✅ Gestion des statuts : En attente, Accepté, Refusé
-- ✅ Ajout de notes personnelles
-- ✅ Filtrage par statut
-- ✅ Modification des statuts et notes
-- ✅ Suppression de candidatures
+### 📋 Application Tracking
+- ✅ Add applications to tracking
+- ✅ Status management: Pending, Accepted, Rejected
+- ✅ Add personal notes
+- ✅ Filter by status
+- ✅ Modify status and notes
+- ✅ Delete applications
 
-## 🛠️ Technologies Utilisées
+### 🎨 Advanced UI/UX
+- ✅ Professional black & white theme
+- ✅ Smooth fade animations for page transitions
+- ✅ Advanced navbar with animated brand letters
+- ✅ Hero section with grid background and word-by-word animations
+- ✅ Premium footer with social links
+- ✅ Split-screen auth pages with sliding animations
+- ✅ Responsive design for all devices
+- ✅ Loading states and indicators
+
+### 🔧 Development Improvements
+- ✅ Environment configuration (dev/prod)
+- ✅ Utility helper functions (DateUtils, StringUtils, ArrayUtils)
+- ✅ Enhanced HTTP error interceptor with detailed handling
+- ✅ Application constants for centralized configuration
+- ✅ Loading service for global state management
+- ✅ Custom form validators
+
+## 🛠️ Technologies Used
 
 ### Frontend
 - **Angular 18.2.0** (Standalone Components)
 - **TypeScript 5.5.2**
 - **RxJS 7.8.0** (Observables, Operators)
 - **Bootstrap 5.3.8** (Responsive Design)
+- **CSS Animations** (Advanced keyframes and transitions)
 
 ### Gestion d'État
 - **@ngrx/store 18.1.1** (State Management)
